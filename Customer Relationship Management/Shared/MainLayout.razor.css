@@ -60,6 +60,8 @@
     flex-grow: 1;
 }
 .navbar {
+    background-color: hsla(var(--igc-primary-500));
+    color: hsla(var(--igc-surface-500));
     height: max-content;
     min-width: min-content;
 }
@@ -114,6 +116,9 @@
 }
 .avatar {
     --background: none;
+}
+.avatar::part(base) {
+    background-color: hsla(var(--igc-surface-500));
 }
 .list {
     height: max-content;
