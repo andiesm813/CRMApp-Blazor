@@ -46,7 +46,8 @@
 }
 .image {
     object-fit: scale-down;
-    height: auto;
+    width: 413px;
+    height: 14px;
     min-width: 0;
 }
 .avatar {
