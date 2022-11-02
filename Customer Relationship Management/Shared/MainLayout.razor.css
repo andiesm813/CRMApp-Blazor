@@ -59,6 +59,33 @@
     min-height: 50px;
     flex-grow: 1;
 }
+.navbar {
+    height: max-content;
+    min-width: min-content;
+}
+.navbar_1 {
+    background-color: hsla(var(--igc-primary-500));
+    color: hsla(var(--igc-surface-500));
+    height: max-content;
+    min-width: min-content;
+    flex-grow: 1;
+    flex-shrink: 0;
+}
+.nav-drawer {
+    min-width: min-content;
+    min-height: 0;
+    flex-shrink: 0;
+}
+.view-container {
+    position: relative;
+    flex-grow: 1;
+}
+.nav-drawer::part(main) {
+    width: 200px;
+}
+.button::part(base) {
+    color: hsla(var(--igc-surface-500));
+}
 .icon {
     font-size: 24px;
     width: 24px;
@@ -87,32 +114,6 @@
 }
 .avatar {
     --background: none;
-}
-.avatar::part(base) {
-    background-color: hsla(var(--igc-surface-500));
-}
-.navbar {
-    background-color: hsla(var(--igc-primary-500));
-    color: hsla(var(--igc-surface-500));
-    height: max-content;
-    min-width: min-content;
-    flex-grow: 1;
-    flex-shrink: 0;
-}
-.nav-drawer {
-    min-width: min-content;
-    min-height: 0;
-    flex-shrink: 0;
-}
-.view-container {
-    position: relative;
-    flex-grow: 1;
-}
-.nav-drawer::part(main) {
-    width: 200px;
-}
-.button::part(base) {
-    color: hsla(var(--igc-surface-500));
 }
 .list {
     height: max-content;
