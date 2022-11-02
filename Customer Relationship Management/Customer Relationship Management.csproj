@@ -22,6 +22,7 @@
     <None Update="Pages/Reports.razor.css" CssScope="reports-scope" />
     <None Update="Pages/Calendar.razor.css" CssScope="calendar-scope" />
     <None Update="Pages/Tasks.razor.css" CssScope="tasks-scope" />
+    <None Update="Pages/ChildView.razor.css" CssScope="child-view-scope" />
   </ItemGroup>
 
 </Project>
