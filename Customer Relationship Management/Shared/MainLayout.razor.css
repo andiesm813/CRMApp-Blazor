@@ -88,6 +88,9 @@
 .avatar {
     --background: none;
 }
+.avatar::part(base) {
+    background-color: hsla(var(--igc-surface-500));
+}
 .navbar {
     background-color: hsla(var(--igc-primary-500));
     color: hsla(var(--igc-surface-500));
