@@ -2,48 +2,82 @@
 @inject NavigationManager NavigationManager
 
 <div class="column-layout master-view-container">
-    <div class="row-layout group">
-        <div @onclick="@(e => NavDrawer?.Toggle())" class="row-layout group_1">
-            <span class="material-icons icon">
-                menu
-            </span>
+    <IgbNavbar class="navbar" master-view-scope>
+        <div slot="start">
+            <IgbButton Variant="ButtonVariant.Flat" class="icon-button">
+                <span class="material-icons">
+                    menu
+                </span>
+                <IgbRipple></IgbRipple>
+            </IgbButton>
         </div>
-        <IgbNavbar class="navbar" master-view-scope>
-            <div>
-                <div class="row-layout group_2">
-                    <img src="assets/CRM Logo.svg" class="image" />
-                </div>
+        <div slot="end">
+            <IgbButton Variant="ButtonVariant.Flat" class="icon-button">
+                <span class="material-icons">
+                    search
+                </span>
+                <IgbRipple></IgbRipple>
+            </IgbButton>
+            <IgbButton Variant="ButtonVariant.Flat" class="icon-button">
+                <span class="material-icons">
+                    favorite
+                </span>
+                <IgbRipple></IgbRipple>
+            </IgbButton>
+            <IgbButton Variant="ButtonVariant.Flat" class="icon-button">
+                <span class="material-icons">
+                    more_vert
+                </span>
+                <IgbRipple></IgbRipple>
+            </IgbButton>
+        </div>
+        <div>Screen Title</div>
+    </IgbNavbar>
+    @if (groupVisible)
+    {
+        <div class="row-layout group">
+            <div @onclick="@(e => NavDrawer?.Toggle())" class="row-layout group_1">
+                <span class="material-icons icon">
+                    menu
+                </span>
             </div>
-            <div slot="end">
-                <div class="row-layout group_3">
-                    <span class="material-icons icon_1">
-                        perm_identity
-                    </span>
-                    <a href class="caption hyperlink">
-                        sanderson@@company.com
-                    </a>
+            <IgbNavbar class="navbar_1" master-view-scope>
+                <div>
+                    <div class="row-layout group_2">
+                        <img src="assets/CRM Logo.svg" class="image" />
+                    </div>
                 </div>
-                <IgbButton Variant="ButtonVariant.Flat" class="icon-button button" master-view-scope>
-                    <span class="material-icons">
-                        search
-                    </span>
-                    <IgbRipple></IgbRipple>
-                </IgbButton>
-                <IgbButton Variant="ButtonVariant.Flat" class="icon-button button" master-view-scope>
-                    <span class="material-icons">
-                        settings
-                    </span>
-                    <IgbRipple></IgbRipple>
-                </IgbButton>
-                <IgbButton Variant="ButtonVariant.Flat" class="icon-button button" master-view-scope>
-                    <span class="material-icons">
-                        notifications_none
-                    </span>
-                    <IgbRipple></IgbRipple>
-                </IgbButton>
-            </div>
-        </IgbNavbar>
-    </div>
+                <div slot="end">
+                    <div class="row-layout group_3">
+                        <span class="material-icons icon_1">
+                            perm_identity
+                        </span>
+                        <a href class="caption hyperlink">
+                            sanderson@@company.com
+                        </a>
+                    </div>
+                    <IgbButton Variant="ButtonVariant.Flat" class="icon-button button" master-view-scope>
+                        <span class="material-icons">
+                            search
+                        </span>
+                        <IgbRipple></IgbRipple>
+                    </IgbButton>
+                    <IgbButton Variant="ButtonVariant.Flat" class="icon-button button" master-view-scope>
+                        <span class="material-icons">
+                            settings
+                        </span>
+                        <IgbRipple></IgbRipple>
+                    </IgbButton>
+                    <IgbButton Variant="ButtonVariant.Flat" class="icon-button button" master-view-scope>
+                        <span class="material-icons">
+                            notifications_none
+                        </span>
+                        <IgbRipple></IgbRipple>
+                    </IgbButton>
+                </div>
+            </IgbNavbar>
+        </div>
+    }
     <div class="row-layout group_4">
         <IgbNavDrawer Open="true" Position="NavDrawerPosition.Relative" @ref="NavDrawer" class="nav-drawer" master-view-scope>
             <IgbList class="list" master-view-scope>
@@ -98,6 +132,7 @@
 </div>
 
 @code {
+    private bool groupVisible = false;
     private IgbNavDrawer? NavDrawer;
     private void Navigate(string path)
     {
