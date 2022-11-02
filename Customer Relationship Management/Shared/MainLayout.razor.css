@@ -45,7 +45,7 @@
     color: hsla(var(--igc-surface-500));
 }
 .image {
-    object-fit: contain;
+    object-fit: none;
     width: 413px;
     height: 14px;
     min-width: 413px;
