@@ -45,10 +45,10 @@
     color: hsla(var(--igc-surface-500));
 }
 .image {
-    object-fit: scale-down;
+    object-fit: contain;
     width: 413px;
     height: 14px;
-    min-width: 0;
+    min-width: 413px;
 }
 .avatar {
     --background: none;

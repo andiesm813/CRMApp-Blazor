@@ -275,10 +275,6 @@
 }
 .user-input_6::part(base) {
     color: hsla(var(--igc-primary-500));
-    background-color: hsla(var(--igc-secondary-100));
-}
-.user-input_7::part(base) {
-    color: hsla(var(--igc-primary-500));
 }
 .dropdown::part(base) {
     height: max-content;

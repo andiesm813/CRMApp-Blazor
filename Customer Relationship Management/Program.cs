@@ -33,7 +33,6 @@ void RegisterIgniteUI(IServiceCollection services)
         typeof(IgbInputModule),
         typeof(IgbDropdownModule),
         typeof(IgbDropdownItemModule),
-        typeof(IgbTabsModule),
-        typeof(IgbCardModule)
+        typeof(IgbTabsModule)
     );
 }
